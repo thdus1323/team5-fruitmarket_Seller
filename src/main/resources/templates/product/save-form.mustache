@@ -1,0 +1,27 @@
+{{> layout/header}}
+
+<div class="d-flex justify-content-center" style="margin-top: 100px; margin-bottom: 100px;">
+    <form id="productForm" action="/product/save" method="post">
+        <div class="row">
+
+            <!-- 상품 정보 입력 섹션 -->
+            <div class="p-3 m-3" style="width: 300px;">
+                <div class="mb-3 mt-3">
+                    상 품 명 : <input name="name" type="text" class="form-control" placeholder="상품명을 입력하세요" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    상품가격 : <input name="price" type="number" class="form-control" placeholder="상품가격을 입력하세요" required>
+                </div>
+                <div class="mb-3 mt-3">
+                    상품수량 : <input name="qty" type="number" class="form-control" placeholder="상품수량을 입력하세요" required>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary mt-3">상품등록완료</button>
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>
+
+{{> layout/footer}}
