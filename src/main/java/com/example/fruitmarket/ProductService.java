@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.swing.plaf.OptionPaneUI;
+import javax.swing.plaf.PanelUI;
 import java.awt.print.PrinterIOException;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -43,4 +44,11 @@ public class ProductService {
         Product product = productRepository.findById(id);
         return product;
     }
+
+    //상품 삭제하기
+   @Transactional
+    public void deleteProduct(Integer id){
+        productRepository.deleteById(id);
+    }
+
 }

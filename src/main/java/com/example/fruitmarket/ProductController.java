@@ -1,5 +1,6 @@
 package com.example.fruitmarket;
 
+import jakarta.persistence.criteria.CriteriaBuilder;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -53,6 +54,13 @@ public class ProductController {
     @PostMapping("/product/{id}/update")
     public String update(@PathVariable Integer id, ProductRequest.UpdateDTO requestDTO){
         productService.changeProduct(id, requestDTO);
+        return "redirect:/product";
+    }
+
+    //상품 삭제하기
+    @PostMapping("/product/{id}/delete")
+    public String delete(@PathVariable Integer id){
+        productService.deleteProduct(id);
         return "redirect:/product";
     }
 }

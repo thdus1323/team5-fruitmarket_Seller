@@ -42,4 +42,12 @@ public class ProductRepository {
         query.setParameter(3, id);
         query.executeUpdate();
     }
+
+    //상품 삭제하기
+    public void deleteById(Integer id){
+        Query query = em.createNativeQuery("delete from product_tb where id=?");
+        query.setParameter(1,id);
+        query.executeUpdate();
+    }
+
 }
