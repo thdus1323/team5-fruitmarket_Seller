@@ -4,6 +4,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.swing.plaf.OptionPaneUI;
+import java.awt.print.PrinterIOException;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -23,5 +25,12 @@ public class ProductService {
     @Transactional
     public void addProduct(ProductRequest.SaveDTO reqDTO){
         productRepository.save(reqDTO);
+    }
+
+    //상품 상세보기
+    public ProductResponse.DetailDTO getProductDetail(Integer id){
+        Product product = productRepository.findById(id);
+        return new ProductResponse.DetailDTO(product);
+
     }
 }
