@@ -6,7 +6,6 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDateTime;
 
-
 @NoArgsConstructor
 @Data
 @Table(name = "product_tb")
