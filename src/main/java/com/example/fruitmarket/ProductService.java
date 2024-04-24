@@ -2,6 +2,7 @@ package com.example.fruitmarket;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -16,5 +17,11 @@ public class ProductService {
         List<Product> productList = productRepository.findAll();
         return productList.stream().map(ProductResponse.ListDTO::new)
                 .collect(Collectors.toList());
+    }
+
+    //상품 등록하기
+    @Transactional
+    public void addProduct(ProductRequest.SaveDTO reqDTO){
+        productRepository.save(reqDTO);
     }
 }

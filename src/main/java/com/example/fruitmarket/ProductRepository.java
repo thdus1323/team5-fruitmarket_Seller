@@ -18,6 +18,13 @@ public class ProductRepository {
         return query.getResultList();
     }
 
-
+    //상품등록
+    public void save(ProductRequest.SaveDTO reqDTO){
+        Query query = em.createNativeQuery("insert into product_tb(name, price,qty,created_at) values (?,?,?,now())");
+        query.setParameter(1, reqDTO.getName());
+        query.setParameter(2, reqDTO.getPrice());
+        query.setParameter(3, reqDTO.getQty());
+        query.executeUpdate();
+    }
 
 }
