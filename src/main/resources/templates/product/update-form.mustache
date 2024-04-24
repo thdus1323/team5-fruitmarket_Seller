@@ -3,39 +3,8 @@
 <div class="d-flex justify-content-center" style="margin-top: 100px; margin-bottom: 100px;">
     <form id="productForm" action="/product/{{id}}/update" method="post" enctype="multipart/form-data">
         <div class="row">
-            <!-- 이미지 업로드 섹션 -->
-
-            <div class="p-3 m-3" style="width: 300px;">
-                <div class="row">
-                    <div class="d-flex justify-content-center align-items-center"
-                         style="width: 300px; height: 300px; border: 1px solid #E6E6E6; color: #E6E6E6;"
-                         id="profilePreview">
-                        <img src="/images/baba.jpg" width="300" height="300">
-                    </div>
-                    <input type="file" id="imageUpload" name="pic"
-                           class="real-upload mx-auto d-block mt-2 w-50 h-50" accept="image/*" required
-                           multiple>
-                </div>
-            </div>
-            <script>
-                $(document).ready(function () {
-                    $('#imageUpload').change(function (event) {
-                        if (this.files && this.files[0]) {
-                            var reader = new FileReader();
-                            reader.onload = function (e) {
-                                $('#profilePreview').html('<img src="' + e.target.result + '" style="max-width: 100%;">');
-                            };
-                            reader.readAsDataURL(this.files[0]);
-                            let fileName = this.files[0].name; // 'this'를 사용해서 파일 이름을 가져옵니다.
-                            console.log(fileName);
-                        }
-                    });
-                });
-            </script>
-
 
             <!-- 상품 정보 입력 섹션 -->
-
             <div class="p-3 m-3" style="width: 300px;">
                 <div class="mb-3 mt-3">
                     상 품 명 : <input name="name" type="text" class="form-control" value="{{product.name}}" readonly>

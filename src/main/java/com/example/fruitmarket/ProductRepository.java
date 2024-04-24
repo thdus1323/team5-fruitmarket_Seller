@@ -32,7 +32,14 @@ public class ProductRepository {
         Query query = em.createNativeQuery("select * from product_tb where id=?", Product.class);
         query.setParameter(1,id);
         return (Product) query.getSingleResult();
-
     }
 
+    //상품 수정하기
+    public void updateById(Integer id, ProductRequest.UpdateDTO requestDTO){
+        Query query = em.createNativeQuery("update product_tb set price=?, qty=? where id=?");
+        query.setParameter(1, requestDTO.getPrice());
+        query.setParameter(2, requestDTO.getQty());
+        query.setParameter(3, id);
+        query.executeUpdate();
+    }
 }

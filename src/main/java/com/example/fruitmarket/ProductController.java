@@ -41,4 +41,18 @@ public class ProductController {
         request.setAttribute("product",product);
         return "product/detail";
     }
+
+    //상품 수정하기
+    @GetMapping("/product/{id}/update-form")
+    public String updateForm(@PathVariable Integer id, HttpServletRequest request){
+        Product product = productService.findById(id);
+        request.setAttribute("product", product);
+        return "/product/update-form";
+    }
+
+    @PostMapping("/product/{id}/update")
+    public String update(@PathVariable Integer id, ProductRequest.UpdateDTO requestDTO){
+        productService.changeProduct(id, requestDTO);
+        return "redirect:/product";
+    }
 }

@@ -9,4 +9,10 @@ public class ProductRequest {
         private Integer price;
         private Integer qty;
     }
+
+    @Data
+    public static class UpdateDTO {
+        private Integer price;
+        private Integer qty;
+    }
 }
