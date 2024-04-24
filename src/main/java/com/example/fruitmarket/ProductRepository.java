@@ -10,11 +10,14 @@ import java.util.List;
 @RequiredArgsConstructor
 @Repository
 public class ProductRepository {
- private final EntityManager em;
+    private final EntityManager em;
 
- // 상품목록보기
-    public List<Product> findAll(){
+    // 상품목록보기
+    public List<Product> findAll() {
         Query query = em.createNativeQuery("select * from product_tb order by id desc", Product.class);
         return query.getResultList();
     }
+
+
+
 }
