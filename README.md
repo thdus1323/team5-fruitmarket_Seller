@@ -52,6 +52,7 @@ DB >> **Repository >> Service >> Controller >>** 고객
     1) 메인페이지 : 상품목록보기
   ![상품목록](https://prod-files-secure.s3.us-west-2.amazonaws.com/fadaf8f9-4b09-4f3d-9e72-038ace21b86b/8d9baaab-b95c-4fe2-aef3-cf7cd7d8845d/Untitled.png)
 
+![Untitled](https://github.com/thdus1323/team5-fruitmarket01/assets/153582422/00a80cd4-e528-4e36-a9a7-56dcd6d69be8)
 
 
 
