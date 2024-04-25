@@ -83,7 +83,7 @@ DB >> **Repository >> Service >> Controller >>** 고객
         return "product/list";
     }
 ```
-https://www.notion.so/1-b73faacf79844803828575e2bd088241?pvs=4#47a7232af6c24dc3baae9b5befa2c53e
+
 
 
 
