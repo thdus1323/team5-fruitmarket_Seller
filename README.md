@@ -50,7 +50,7 @@ DB >> **Repository >> Service >> Controller >>** 고객
     : 뷰/페이지에 따른 순서보다 기능별 생성에 따른 순서를 따르는 것이 디버깅하기 쉽다.
     
     1) 메인페이지 : 상품목록보기
-  ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/fadaf8f9-4b09-4f3d-9e72-038ace21b86b/8d9baaab-b95c-4fe2-aef3-cf7cd7d8845d/Untitled.png)
+  ![상품목록](https://prod-files-secure.s3.us-west-2.amazonaws.com/fadaf8f9-4b09-4f3d-9e72-038ace21b86b/8d9baaab-b95c-4fe2-aef3-cf7cd7d8845d/Untitled.png)
 
 
 
