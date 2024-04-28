@@ -33,9 +33,9 @@ DB >> **Repository >> Service >> Controller >>** 고객
 
 3) Controller 요청에 대한 뷰 반환 및 길잡이
 
--Post : 자료 입력-v
+-Postmapping : 자료 서버에 입력/생성성
 
--get : 자료 획득-v
+-getmapping : 자료 서버에 요청
 
 ## 1단계 순서 및 중요 내용 정리
 
