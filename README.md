@@ -33,7 +33,7 @@ DB >> **Repository >> Service >> Controller >>** 고객
 
 3) Controller 요청에 대한 뷰 반환 및 길잡이
 
--Postmapping : 자료 서버에 입력/생성성
+-Postmapping : 자료 서버에 입력/생성
 
 -getmapping : 자료 서버에 요청
 
