@@ -14,39 +14,39 @@ public class ProductRepository {
 
     // 상품목록보기
     public List<Product> findAll() {
-        Query query = em.createNativeQuery("select * from product_tb order by id desc", Product.class);
+        Query query = em.createNativeQuery("select * from product_tb order by product_id desc", Product.class);
         return query.getResultList();
     }
 
     //상품등록
     public void save(ProductRequest.SaveDTO reqDTO){
-        Query query = em.createNativeQuery("insert into product_tb(name, price,qty,created_at) values (?,?,?,now())");
-        query.setParameter(1, reqDTO.getName());
-        query.setParameter(2, reqDTO.getPrice());
-        query.setParameter(3, reqDTO.getQty());
+        Query query = em.createNativeQuery("insert into product_tb(product_name, product_price,product-qty,created_at) values (?,?,?,now())");
+        query.setParameter(1, reqDTO.getProductName());
+        query.setParameter(2, reqDTO.getProductPrice());
+        query.setParameter(3, reqDTO.getProductQty());
         query.executeUpdate();
     }
 
     //상품상세보기
-    public Product findById(int id){
-        Query query = em.createNativeQuery("select * from product_tb where id=?", Product.class);
-        query.setParameter(1,id);
+    public Product findById(int productId){
+        Query query = em.createNativeQuery("select * from product_tb where product_id=?", Product.class);
+        query.setParameter(1,productId);
         return (Product) query.getSingleResult();
     }
 
     //상품 수정하기
-    public void updateById(Integer id, ProductRequest.UpdateDTO requestDTO){
-        Query query = em.createNativeQuery("update product_tb set price=?, qty=? where id=?");
-        query.setParameter(1, requestDTO.getPrice());
-        query.setParameter(2, requestDTO.getQty());
-        query.setParameter(3, id);
+    public void updateById(Integer productId, ProductRequest.UpdateDTO requestDTO){
+        Query query = em.createNativeQuery("update product_tb set product_price=?, product_qty=? where product_id=?");
+        query.setParameter(1, requestDTO.getProductPrice());
+        query.setParameter(2, requestDTO.getProductQty());
+        query.setParameter(3, productId);
         query.executeUpdate();
     }
 
     //상품 삭제하기
-    public void deleteById(Integer id){
-        Query query = em.createNativeQuery("delete from product_tb where id=?");
-        query.setParameter(1,id);
+    public void deleteById(Integer productId){
+        Query query = em.createNativeQuery("delete from product_tb where product_id=?");
+        query.setParameter(1,productId);
         query.executeUpdate();
     }
 

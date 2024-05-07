@@ -13,16 +13,16 @@ import java.time.LocalDateTime;
 public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    private Integer id;
+    private Integer productId;
 
     @Column(unique = true, length = 20, nullable = false)
-    private String name;
+    private String productName;
 
     @Column(nullable = false)
-    private Integer price;
+    private Integer productPrice;
 
     @Column(nullable = false)
-    private Integer qty;
+    private Integer productQty;
 
     @CreationTimestamp
     private LocalDateTime createdAt;

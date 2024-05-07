@@ -18,13 +18,13 @@
         {{#productList}}
             <tbody>
             <tr class="offer-table">
-                <th scope="row">{{id}}</th>
-                <td>{{name}}</td>
-                <td>{{price}}</td>
-                <td>{{qty}}</td>
+                <th scope="row">{{productId}}</th>
+                <td>{{productName}}</td>
+                <td>{{productPrice}}</td>
+                <td>{{productQty}}</td>
                 <td>
                     <div class="new-create-button">
-                        <form action="/product/{{id}}">
+                        <form action="/product/{{productId}}">
                             <!--                            // 왜냐면 중괄호 productList로 이미 감쌌기 때문에 product.id 하지 않아도 알아먹는다.-->
                             <button type="submit" class="btn btn-outline-primary">상세보기</button>
                         </form>

@@ -36,31 +36,31 @@ public class ProductController {
     }
 
     //상품상세보기
-    @GetMapping("/product/{id}")
-    public String detail(@PathVariable Integer id, HttpServletRequest request){
-        ProductResponse.DetailDTO product = productService.getProductDetail(id);
+    @GetMapping("/product/{productId}")
+    public String detail(@PathVariable Integer productId, HttpServletRequest request){
+        ProductResponse.DetailDTO product = productService.getProductDetail(productId);
         request.setAttribute("product",product);
         return "product/detail";
     }
 
     //상품 수정하기
-    @GetMapping("/product/{id}/update-form")
-    public String updateForm(@PathVariable Integer id, HttpServletRequest request){
-        Product product = productService.findById(id);
+    @GetMapping("/product/{productId}/update-form")
+    public String updateForm(@PathVariable Integer productId, HttpServletRequest request){
+        Product product = productService.findById(productId);
         request.setAttribute("product", product);
         return "/product/update-form";
     }
 
-    @PostMapping("/product/{id}/update")
-    public String update(@PathVariable Integer id, ProductRequest.UpdateDTO requestDTO){
-        productService.changeProduct(id, requestDTO);
+    @PostMapping("/product/{productId}/update")
+    public String update(@PathVariable Integer productId, ProductRequest.UpdateDTO requestDTO){
+        productService.changeProduct(productId, requestDTO);
         return "redirect:/product";
     }
 
     //상품 삭제하기
-    @PostMapping("/product/{id}/delete")
-    public String delete(@PathVariable Integer id){
-        productService.deleteProduct(id);
+    @PostMapping("/product/{productId}/delete")
+    public String delete(@PathVariable Integer productId){
+        productService.deleteProduct(productId);
         return "redirect:/product";
     }
 }

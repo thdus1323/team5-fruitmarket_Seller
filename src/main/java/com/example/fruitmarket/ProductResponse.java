@@ -6,31 +6,31 @@ import lombok.Data;
 public class ProductResponse {
     @Data
     public static class ListDTO {
-        private Integer id;
-        private String name;
-        private Integer price;
-        private Integer qty;
+        private Integer productId;
+        private String productName;
+        private Integer productPrice;
+        private Integer productQty;
 
         public ListDTO(Product product) {
-            this.id = product.getId();
-            this.name = product.getName();
-            this.price = product.getPrice();
-            this.qty = product.getQty();
+            this.productId = product.getProductId();
+            this.productName = product.getProductName();
+            this.productPrice = product.getProductPrice();
+            this.productQty = product.getProductQty();
         }
     }
 
     @Data
     public static class DetailDTO {
-        private Integer id;
-        private String name;
-        private Integer price;
-        private Integer qty;
+        private Integer productId;
+        private String productName;
+        private Integer productPrice;
+        private Integer productQty;
 
         public DetailDTO(Product product) {
-            this.id = product.getId();
-            this.name = product.getName();
-            this.price = product.getPrice();
-            this.qty = product.getQty();
+            this.productId = product.getProductId();
+            this.productName = product.getProductName();
+            this.productPrice = product.getProductPrice();
+            this.productQty = product.getProductQty();
         }
     }
 }

@@ -5,14 +5,14 @@ import lombok.Data;
 public class ProductRequest {
     @Data
     public static class SaveDTO {
-        private String name;
-        private Integer price;
-        private Integer qty;
+        private String productName;
+        private Integer productPrice;
+        private Integer productQty;
     }
 
     @Data
     public static class UpdateDTO {
-        private Integer price;
-        private Integer qty;
+        private Integer productPrice;
+        private Integer productQty;
     }
 }

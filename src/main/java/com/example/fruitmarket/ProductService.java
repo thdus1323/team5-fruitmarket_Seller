@@ -29,26 +29,26 @@ public class ProductService {
     }
 
     //상품 상세보기
-    public ProductResponse.DetailDTO getProductDetail(Integer id){
-        Product product = productRepository.findById(id);
+    public ProductResponse.DetailDTO getProductDetail(Integer productId){
+        Product product = productRepository.findById(productId);
         return new ProductResponse.DetailDTO(product);
     }
 
     //상품 수정하기
     @Transactional
-    public void changeProduct(Integer id, ProductRequest.UpdateDTO requestDTO){
-        productRepository.updateById(id,requestDTO);
+    public void changeProduct(Integer productId, ProductRequest.UpdateDTO requestDTO){
+        productRepository.updateById(productId,requestDTO);
     }
 
-    public Product findById(Integer id) {
-        Product product = productRepository.findById(id);
+    public Product findById(Integer productId) {
+        Product product = productRepository.findById(productId);
         return product;
     }
 
     //상품 삭제하기
    @Transactional
-    public void deleteProduct(Integer id){
-        productRepository.deleteById(id);
+    public void deleteProduct(Integer productId){
+        productRepository.deleteById(productId);
     }
 
 }

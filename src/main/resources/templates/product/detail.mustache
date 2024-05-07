@@ -5,17 +5,17 @@
     </div>
     <div class="p-3 m-3" style="width: 300px;" >
         <div class="mb-3 mt-3">
-            상 품 명 : <input name="name" type="text" class="form-control" value="{{product.name}}" readonly>
+            상 품 명 : <input name="name" type="text" class="form-control" value="{{product.productName}}" readonly>
         </div>
         <div class="mb-3 mt-3">
-            상품가격 : <input name="price" type="number" class="form-control" value="{{product.price}}" readonly>
+            상품가격 : <input name="price" type="number" class="form-control" value="{{product.productPrice}}" readonly>
         </div>
         <div class="mb-3 mt-3">
-            상품수량 : <input name="qty" type="number" class="form-control" value="{{product.qty}}" readonly>
+            상품수량 : <input name="qty" type="number" class="form-control" value="{{product.productQty}}" readonly>
         </div>
         <div class="d-flex justify-content-center">
-            <span><a href="/product/{{id}}/update-form" class="btn btn-primary mt-3">수정하기</a></span>
-            <span><form action="/product/{{product.id}}/delete" method="post">
+            <span><a href="/product/{{productId}}/update-form" class="btn btn-primary mt-3">수정하기</a></span>
+            <span><form action="/product/{{product.productId}}/delete" method="post">
                     <button class="btn btn-danger mt-3">삭제하기</button>
                 </form>
                 </span>
