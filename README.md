@@ -1,4 +1,4 @@
-1단계 : 상품 판매자 서버
+## 1단계 : 상품 판매자 서버
 
 1. 들어가기 전, 간단한 정리
 
@@ -54,7 +54,8 @@ DB >> **Repository >> Service >> Controller >>** 고객
 
 1) 메인페이지 : 상품목록보기
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/fadaf8f9-4b09-4f3d-9e72-038ace21b86b/e3863f60-d531-4163-9f97-53f7b992d77f/Untitled.png)
+![image](https://github.com/thdus1323/team5-fruitmarket_Seller/assets/153582422/1ecb735a-fe39-446f-989c-43ec0ee03fed)
+
 
 (1) Repository
 
