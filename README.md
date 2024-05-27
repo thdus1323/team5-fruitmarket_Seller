@@ -54,9 +54,6 @@ DB >> **Repository >> Service >> Controller >>** 고객
 
 1) 메인페이지 : 상품목록보기
 
-![image](https://github.com/thdus1323/team5-fruitmarket_Seller/assets/153582422/1ecb735a-fe39-446f-989c-43ec0ee03fed)
-
-
 (1) Repository
 
 -제품을 리스트로 담아서 다 가져와
