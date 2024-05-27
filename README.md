@@ -1,4 +1,4 @@
-# 1단계 : 상품 판매자 서버
+1단계 : 상품 판매자 서버
 
 1. 들어가기 전, 간단한 정리
 
@@ -33,9 +33,8 @@ DB >> **Repository >> Service >> Controller >>** 고객
 
 3) Controller 요청에 대한 뷰 반환 및 길잡이
 
--Postmapping : 자료 서버에 입력/생성
-
--getmapping : 자료 서버에 요청
+- Postmapping : 자료 서버에 입력/생성
+- getmapping : 자료 서버에 요청
 
 ## 1단계 순서 및 중요 내용 정리
 
@@ -55,8 +54,7 @@ DB >> **Repository >> Service >> Controller >>** 고객
 
 1) 메인페이지 : 상품목록보기
 
-![Screenshot_1](https://github.com/thdus1323/team5-fruitmarket01/assets/153582422/4f43178f-7394-49e2-8d57-b03aabdb5d40)
-
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/fadaf8f9-4b09-4f3d-9e72-038ace21b86b/e3863f60-d531-4163-9f97-53f7b992d77f/Untitled.png)
 
 (1) Repository
 
@@ -280,3 +278,12 @@ DB >> **Repository >> Service >> Controller >>** 고객
 (3)Controller
 
 해당 id의 제품의 삭제 요청이 들어오면,그것을 id로 구분하여 찾아서 service에 던짐.
+
+```java
+   //상품 삭제하기
+    @PostMapping("/product/{id}/delete")
+    public String delete(@PathVariable Integer id){
+        productService.deleteProduct(id);
+        return "redirect:/product";
+    }
+```
